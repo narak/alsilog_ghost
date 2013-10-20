@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="vertical">
+        <div id="site-head-content">
+            <a href="{{@blog.url}}" class="blog-title"><h1>{{@blog.title}}</h1></a>
+            <ul class="blog-nav">
+                <li><a href="{{@blog.url}}">Blog</a></li>
+                <li><a href="{{@blog.url}}/about">About</a></li>
+                <li><a href="{{@blog.url}}/assets/resume.pdf">Resume</a></li>
+            </ul>
+            <ul class="blog-nav social">
+                <li class="image"><a href="https://github.com/narak/"><span class="alt">Github</span><img src="{{@blog.url}}/assets/img/github.png" height="28"></a></li>
+                <li class="image"><a href="http://www.linkedin.com/in/karansheth1"><span class="alt">Linked</span><img src="{{@blog.url}}/assets/img/linkedin.png" height="28"></a></li>
+            </ul>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+</header>
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    <footer class="site-footer">
+        <div class="inner">
+	     <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+             <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+        </div>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{! ghost_foot}}
+
+</body>
+</html>
