@@ -132,6 +132,10 @@ h4 a, h5 a, h6 a {
     color: #222;
 }
 
+h1 a:hover, h2 a:hover, h3 a:hover,
+h4 a:hover, h5 a:hover, h6 a:hover {
+    color: #3498db;
+}
 
 p, ul, ol {
     margin: 1.6em 0;
@@ -360,9 +364,12 @@ table.plain tbody > tr:nth-child(odd) > th {
     letter-spacing: -1px;
     background-color: #2f2b2c;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 20px 3px 3px;
     display: inline-block;
     vertical-align: middle;
+}
+.blog-title:hover {
+    color: #3498db;
 }
 .blog-title h1 {
     margin: 0;
